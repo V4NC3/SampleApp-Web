@@ -6,7 +6,7 @@ class Logout extends React.Component {
             <div>
                 <p>Hello, this is the Logout Component page</p>
             </div>
-        )
+        );
     }
 }
 

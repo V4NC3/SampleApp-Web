@@ -7,9 +7,8 @@ import Logout from './components/client/Logout';
 import Registration from './components/client/Registration';
 
 //Routes
-const Routes = () => {
+const Routes = () => (
     <Router>
-        {/* navi bar */}
         <div className='nav'>
             <ul>
                 <li>
@@ -40,7 +39,7 @@ const Routes = () => {
 
         </div>
     </Router>
-};
+);
 
 //React codes
 
