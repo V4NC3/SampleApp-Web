@@ -4,7 +4,7 @@ import logo from '../images/logo.svg';
 //import './App.css';
 import '../containers/App.css';
 
-class App extends Component {
+class Home extends Component {
     render() {
         return (
             <div className="Home">
