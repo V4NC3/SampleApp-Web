@@ -6,7 +6,7 @@ import InputComponent from '../../utils/InputComponent';
 import FormErrors from '../../utils/InputComponent';
 
 
-class Register extends React.Component {
+class Registration extends React.Component {
     constructor(props) {
         super(props);
         //setting the condition: when normal or initial state of the inputComponent on startUp
@@ -108,4 +108,4 @@ class Register extends React.Component {
     }
 }
 
-export default Register;
+export default Registration;
