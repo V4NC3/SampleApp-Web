@@ -71,6 +71,7 @@ class Login extends React.Component {
     render() {
         return (
             <div>
+<<<<<<< HEAD
                 <p>This is the Login page...</p>
                 <form>
 
@@ -103,6 +104,9 @@ class Login extends React.Component {
 
 
 
+=======
+                <p>This is the Login page.</p>
+>>>>>>> 8e3dc0b28792330154ca0c1bd50f4c796fe7b5a6
             </div>
         );
     }
