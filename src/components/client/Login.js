@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {loginUser} from '../../components/actions/UserActions'
+import {loginUser} from '../../components/actions/ClientActions'
 import InputComponent from '../../utils/InputComponent';
 
 class Login extends React.Component {
@@ -96,12 +96,7 @@ class Login extends React.Component {
                         this.props.login({ email: 'tester9000@gmail.com', password: 'tester9000' });
                         this.props.history.push("/");
                     }}>Login</button>
-
-           
                 </form>
-
-
-
             </div>
         );
     }

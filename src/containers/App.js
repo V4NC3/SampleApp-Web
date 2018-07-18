@@ -2,8 +2,14 @@ import React, { Component } from 'react';
 import logo from '../images/logo.svg';
 import '../containers/App.css';
 import Routes from '../../src/Routes';
+import {connect} from 'react-redux';
+import {currentLoginStatus} from '../components/actions/ClientActions';
 
 class App extends Component {
+  componentDidMount () {
+    this.props.setLoginStatus();
+  }
+
   render() {
     return (
       <div className="App">
@@ -12,7 +18,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
 
-        <Routes />
+        <Routes isLoggedIn = {this.props.user.isLoggedIn} />
 
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
@@ -22,4 +28,18 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    user:state.ClientReducer
+  };
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setLoginStatus: () => {
+      dispatch(currentLoginStatus());
+    }
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

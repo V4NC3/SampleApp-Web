@@ -1,5 +1,5 @@
 import {createStore, combineReducers, applyMiddleware} from 'redux';
-import {createLogger} from 'C:/Users/Admin/AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/redux-logger';
+import {createLogger} from 'redux-logger';
 import thunk from 'redux-thunk';
 import promise from 'redux-promise-middleware';
 
