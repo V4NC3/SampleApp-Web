@@ -3,13 +3,8 @@ import logo from '../images/logo.svg';
 import '../containers/App.css';
 import Routes from '../../src/Routes';
 import {connect} from 'react-redux';
-import {currentLoginStatus} from '../components/actions/ClientActions';
 
 class App extends Component {
-  componentDidMount () {
-    this.props.setLoginStatus();
-  }
-
   render() {
     return (
       <div className="App">
@@ -28,18 +23,11 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state)=> {
   return {
-    user:state.ClientReducer
-  };
-}
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    setLoginStatus: () => {
-      dispatch(currentLoginStatus());
-    }
+    user:state.UserReducer
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+export default connect(mapStateToProps)(App);
